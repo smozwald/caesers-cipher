@@ -9,6 +9,8 @@ def cipher(string, offset = 3):
     UPPER = list(range(UPPER_MIN, UPPER_MAX+1))
     new_string = ""
 
+    if not isinstance(offset, int):
+        offset = 3
     ##Check that we need to actually run this, and also make offset manageable.
     if len(string) == 0:
         return ""

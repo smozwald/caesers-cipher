@@ -1,0 +1,19 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <title> Caesers Cipher</title>
+        </head>
+
+        <body> <h1> Caesers Cipher, enter a (latin) string and the desired offset </h1></body>
+        <div id="input">
+            <form action = "{% url 'cipher:cipher_input' %}" method = "post">
+                {% csrf_token%}
+
+                <input type = "text" name = "string" placeholder = "Enter a string" value = "Enter a string">
+                <input type = "text" name = "offset" placeholder = "Enter a number" value = 3>
+                <button type = "submit"> Submit Form</button>
+            </form>
+        </div>
+        <div id="output"> {{ output }}</div>
+    </html>
+</DOCTYPE>
